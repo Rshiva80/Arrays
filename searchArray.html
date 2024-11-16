@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search </title>
+</head>
+<script>
+
+    let data = [20,40,60,5,10,70,80,99];
+    // let searchNum = 70;
+    // let index = undefined;
+
+    // for (let i=0;i<=data.length;i++){
+
+    //    if(data[i]===searchNum){
+
+    //     index = i;
+        
+    //     console.warn(index);
+    //     break;
+    //    }
+
+    // }
+    //console.warn(data.indexOf(searchNum));
+
+    // by function  and button
+    
+
+    // with Button
+
+     
+
+     function searchData(){
+
+    let searchNum = document.getElementById("serach1").value;
+    let index = undefined;
+
+    for (let i=0;i<=data.length;i++){
+
+       if(data[i]===parseInt(index)){
+
+        index = i;
+        break;
+       }
+
+    }
+    console.warn(index);
+}
+
+</script>
+<body>
+
+    <input type = "text" placeholder = "Enter value" id = "serach1" >
+    <button onclick="searchData()" > Enter the index 
+
+    </button>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+</head>
+<body>
+    <script>
+// bubble sorting
+
+let arr1  = [20,2,45,3,87,67,10,200,50];
+
+for(let i=0;i<arr1.length;i++){
+    for(let j=0;j<arr1.length;j++){
+        
+        if(arr1[j] > arr1[j+1])
+        {
+        let temp =0;
+        temp = arr1[j];
+        arr1[j] = arr1[j+1];
+        arr1[j+1]=temp;
+
+        }
+        
+    }
+    console.warn(arr1);
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>

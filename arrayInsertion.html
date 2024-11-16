@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Array</title>
+    <script>
+
+        let data = [60, 30, 10, 67, 40];
+        let newEl = 70;
+        let position = 2;
+
+        console.warn(data);
+
+        // <!-- For static number-->
+
+        for (let i = data.length - 1; i >= 0; i--) {
+
+            if (i >= position) {
+
+                data[i + 1] = data[i];
+
+                if (i == position) {
+
+                    data[i] = newEl;
+                }
+
+
+            }
+        }
+        console.warn(data);
+        // <!-- For dymanic number-->
+
+        function insertEl() {
+            let data1 = [60, 30, 10, 67, 40];
+            let newEl1 = document.getElementById("newEl").value;
+            let position1 = document.getElementById("position").value;
+
+            for (let i = data1.length - 1; i >= 0; i--) {
+
+                if (i >= position1) {
+
+                    data1[i + 1] = data1[i];
+
+                    if (i == position1) {
+
+                        data1[i] = newEl1;
+                    }
+
+                }
+
+            }   
+            console.warn(data1);
+
+        }
+
+        // With method using splice method (position 2 , till next number , which number);
+        let data3 = [60, 30, 10, 67, 40];
+        data3.splice(2,0,2000);
+        console.warn(data3);
+
+    </script>
+</head>
+
+<body>
+
+
+    <input type="text" id="position" placeholder=" Enter the position" />
+    <input type="text" id="newEl" placeholder=" Enter the new number " />
+
+    <button onclick="insertEl()"> Click </button>
+
+
+</body>
+
+</html>

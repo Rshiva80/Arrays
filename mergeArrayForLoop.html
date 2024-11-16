@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MergeArray</title>
+</head>
+<script>
+    // // for loop 
+    // let data1 = [10,20,30,40,50,60];
+    // let data2= [70,80,90,100];
+    // let data3 = [];
+
+    // for (i=0;i<data1.length;i++){
+    //     data3[i] = data1[i];
+    // }
+    //  for(i=0;i<data2.length;i++){
+    //     data3[data1.length+i] = data2[i];
+    //  }
+
+    //  console.warn(data3);
+    // spead operator data3 = [...data1,...data2]
+
+    // While loop and sorted array
+
+    let data1 = [10,20,30,40,50,60];
+    let data2 = [70,80,90,100];
+    let data3 = [];
+    let d1 = 0;
+    let d2 = 0;
+    let d3 = 0;
+
+    while(d1<data1.length || d2<data2.length)
+    {
+
+        if(data1[d1]<data2[d2])
+        {
+
+            data3[d3] = data1[d1];
+            d1++;
+            console.warn("d1" +  d1);
+        } 
+        else {
+
+            data3[d3] = data2[d2];
+           
+            d2++;
+            console.warn("d2" +  d2);
+        }
+        d3++;
+    }   
+ 
+        while(d1<data1.length)
+        {
+            data3[d3]=data1[d1];
+            d1++;
+            d3++;
+        }
+     console.warn(data3);
+
+     //simple solution without sorted array , using while loop 
+                                                                                         
+let arr1 = [2,45,67,23,34,56];
+let arr2 = [34,6,48,89,6];
+let arr3 = [];
+let i=0; 
+while(i<arr1.length) {
+  arr3[i] = arr1[i];
+  i++;
+} 
+let j=0;
+while(j<arr2.length) {
+  arr3[i+j] = arr2[j];
+  j++;
+}
+console.log(arr3)
+
+</script>
+
+<body>
+
+
+
+</body>
+
+</html>
