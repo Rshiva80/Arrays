@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursion</title>
+</head>
+<body>
+    <script>
+      // first example
+
+        // function apple(x){
+           
+        //     console.warn(x);
+        //     if(x<10)
+        //     {
+
+        //         apple(x+1);
+        //     }
+        // }
+        // let data1 = 0;
+        // apple(data1);
+
+
+    //   // second example
+
+    //     function factor1(data){
+    //         return data * data;
+
+    //     }
+    //     let data = 5;
+    //     console.warn(factor1(data));
+
+    // thrid example - Factorial
+
+    function factorial(y){
+
+        if(y==0){
+            return 1;
+
+        }
+
+        return y*factorial(y-1);
+
+    }
+    let data2 = 5;
+
+    console.warn(factorial(data2))
+    </script>
+</body>
+</html>
