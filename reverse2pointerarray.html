@@ -8,17 +8,38 @@
 </head>
 <script>
      
-   let data = [10,20,30,40,50,60];
+  //  let data = [10,20,30,40,50,60];
      
-  let start = 0;
-  let end = data.length;
+  // let start = 0;
+  // let end = data.length;
 
-  while(start<end){
-    data = data.reverse(data[start],data[end]);
-    start++;
-    end--;
+  // while(start<end){
+  //   data = data.reverse(data[start],data[end]);
+  //   start++;
+  //   end--;
     
-  } console.log(data);
+  // } console.log(data);
+
+  // Reverse array with Recursion  #13 https://www.youtube.com/watch?v=mkXDo_OlHjo&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=14&ab_channel=CodeStepByStep
+
+  let data2= [5,12,65,89,0];
+  let temp ;
+
+  function reversee(data2,start1,end1){
+
+    console.warn(data2);
+
+    if(start1<=end1){
+
+    temp = data2[start1];
+    data2[start1] = data2[end1];
+    data2[end1]= temp;
+    reversee(data2,start1+1,end1-1);
+    }
+
+  }
+
+  reversee(data2,0,data2.length-1); // (array , start point of array , last point of array)
 
 </script>
 

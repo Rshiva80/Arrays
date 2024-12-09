@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check String is palindrome or not in JavaScript</title> 
+
+</head>
+<script>
+//https://www.youtube.com/watch?v=bUD4ABUxWss&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=30&ab_channel=CodeStepByStep
+
+function palin(data){
+
+    let start = 0;
+    let end = data.length -1 ;
+
+    let result = true;
+
+    while(end>start)
+    {
+        if(data[start]!= data[end]){
+                result = false;
+        }
+        start++;
+        end--; 
+    }
+        return result;
+}
+
+let str = 'level';
+console.warn(palin(str));
+
+
+</script>
+<body>
+    
+</body>
+</html>
