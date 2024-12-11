@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Data structure in JavaScript</title>
+</head>
+<script>
+
+let data = [];
+let currentsize = data.length;
+let max = 5;
+
+function push(newVal) {
+
+    if(currentsize<max){
+    data[currentsize] = newVal;
+    currentsize++;
+    } else {
+        alert("More than max limit");
+    }
+}
+
+push(20)
+push(40)
+push(27)
+push(23)
+push(29)
+push(0)
+
+console.warn(data);
+
+
+</script>
+<body>
+    
+</body>
+</html>
