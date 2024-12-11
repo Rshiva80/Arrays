@@ -21,12 +21,25 @@ function push(newVal) {
     }
 }
 
+function pop () {
+
+    if(currentsize > 0){
+
+       currentsize -= 1;
+        data.length = currentsize;
+
+    }
+    else {
+        alert("Nothing to remove");
+    }
+}
+
 push(20)
 push(40)
 push(27)
 push(23)
 push(29)
-push(0)
+pop();
 
 console.warn(data);
 
