@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<script>
+
+    let data = [];
+    let currentsize = data.length;
+
+    function push(newVal) {
+
+        
+            data[currentsize] = newVal;
+            currentsize ++; 
+
+
+
+    }
+
+    function pop ()
+{
+    lastRemoveditem = data[currentsize-1];
+    currentsize -=1 ;
+    data.length = currentsize ;
+    return lastRemoveditem;
+
+}
+
+function reversestr(item) {
+ for(let i =0; i< item.length; i++) {
+
+    push(item[i]);
+ }
+
+ for(let i =0; i< item.length; i++) {
+
+    item[i] = pop();
+}
+}
+let str = "anil";
+ 
+str = str.split("");
+ 
+reversestr(str);
+console.warn(str.join(""));
+
+</script>
+<body>
+    
+</body>
+</html>
