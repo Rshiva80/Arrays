@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1> Stack </h1>
-    <input type="text" placeholder=" Enter the Element " id="newEl"> 
-    <button> Add Element to Stack  </button>
-    <button> Remove Element to Stack  </button>
-    <button> Display all Elements to Stack  </button>
-</body>
+  </head>
+  <script> 
+    let data = [];
+
+    let currentsize = data.length;
+    let max = 5;
+
+    function push () {
+     let  newVal = document.getElementById("newEl").value;
+    if(currentsize < max) {
+        data[currentsize] = newVal;
+        currentsize ++
+        document.getElementById("newEl").value = "";
+        console.warn("Element Added");
+
+    } else {
+
+        alert("You are done");
+    }
+
+    }
+
+    function pop() {
+        if(currentsize>0){
+        currentsize -= 1;
+        data.length = currentsize;
+        console.warn("Element Removed");
+        }   else {
+        alert("Nothing to remove");
+    }
+}
+
+    function display () {
+        for(let i = 0 ; i <= currentsize -1 ; i++){
+            console.warn("stack added " ,i, "value added is ", data[i]);
+        }
+
+    }
+
+   
+  
+
+  </script>
+  <body>
+    <h1>Stack</h1>
+    <input type="text" placeholder= "Enter the Element" id="newEl" />
+    <button onclick= "push()" > Add Element to Stack</button>
+    <button onclick= "pop()" > Remove Element to Stack</button>
+    <button onclick= "display()" > Display all Elements to Stack</button>
+  </body>
 </html>
