@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The sum of two numbers should be one</title>
+</head>
+<script> 
+
+    // let data = [-5,-4,-3,-2,0,2,4,6,8];
+    // for(let i=0 ;i<data.length;i++){
+    //     for(let j=1;j<data.length ;j++ ) {
+
+    //     if(data[i]+data[j+1]===0){
+    //         console.warn("The sum is 0", data[i] , data[j+1])
+    //     }else{
+    //         console.warn("The sum is not zero" , data[j],data[j+1])
+    //     }
+    // }
+    // }
+
+    //linear time complexity
+
+    function FindSum(arr){
+        let left  = 0;
+        let right = arr.length-1;
+        let sum ; 
+
+        while(left < right){
+
+            sum = arr[left] + arr[right];
+            if(sum===0){
+                return [arr[left], arr[right]] ;
+            } else if(sum > 0){
+                right -- ;
+            }
+            else  {
+                left ++;
+            }
+        }
+        return null; // Return null if no pair is found
+    }
+
+    const result = FindSum([-5,-4,-3,-2,0,2,4,6,8]);
+    console.log(result);
+
+//     function FindSum(arr) {
+//     let left = 0;
+//     let right = arr.length - 1;
+//     let sum;
+
+//     while (left < right) {
+//         sum = arr[left] + arr[right];
+//         if (sum === 0) {
+//             return [arr[left], arr[right]]; // Return as an array
+//         } else if (sum > 0) {
+//             right--;
+//         } else {
+//             left++;
+//         }
+//     }
+//     return null; // Return null if no pair is found
+// }
+
+// const result = FindSum([-5, -4, -3, -2, 0, 2, 4, 6, 8]);
+// console.log(result);
+
+
+</script>
+<body>
+    
+</body>
+</html>

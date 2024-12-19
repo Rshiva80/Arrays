@@ -26,7 +26,7 @@ function enqueue(newNum){
 }
 
 function dequeue() {
-if(currentsize > 0){
+if(!isEmpty()){
     for(let i=0;i<queue.length;i++){
        queue[i] = queue[i+1];
     }
@@ -40,21 +40,43 @@ if(currentsize > 0){
 
 function display(){
 
-    console.log(queue);
+    console.warn(`The queue is ${queue}`);
 }
 
-enqueue(20);
-enqueue(200);
-enqueue(40);
-enqueue(270);
 
+function front(){
 
-dequeue();
-dequeue();
-display();
+    if (!isEmpty()){
+    console.warn(`The Front number is ${queue[0]}`);
+}   else 
+{
+    console.warn("The queue is empty");
+
+}
+}
+
+function rear(){
+    if (!isEmpty()){
+    console.warn(`The rear number is ${queue[currentsize-1]}`);
+}   else 
+{
+    console.warn("The queue is empty");
+
+}
+}
+
+function isEmpty(){
+    if(currentsize<=0){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
 </script>
 <body>
     
 </body>
+    
 </html>
