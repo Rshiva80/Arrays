@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let data = [10,15,20,25,30,35,40];
+    let start = 0
+    let end = data.length-1
+    let find = 20;
+    let position = undefined;
+
+    function reverseBinarysearch(data,start,end) {
+
+        let mid = Math.floor((start+end)/2);
+        if(data[mid] === find){
+            position = mid;
+            return true
+        } else if(data[mid]<find)
+        {
+            reverseBinarysearch(data,mid+1,end) 
+        } else
+        reverseBinarysearch(data,start,mid-1) 
+    }
+
+    
+reverseBinarysearch(data,start,end)
+console.warn(position);
+
+</script>
+<body>
+    
+</body>
+</html>
