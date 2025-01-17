@@ -16,10 +16,24 @@
        }
        for(ch of str1)
        {
-        //console.warn(ch);
-        ObjStr1[ch] = (ObjStr1[ch]||0) +1
+       // console.warn(ch); // will print "hello in object with count of characters"
+        ObjStr1[ch] = (ObjStr1[ch]||0) +1; // will extract each chararcter of Str1 and put it in OBJ
+       //make it keys. if the charcters are defined or 0 then increment the characters of hello
+         
        }
+       
        console.warn(ObjStr1);
+
+       // to check characters of str2 with str1 
+
+       for(ch of str2){
+        //console.warn(ObjStr1[ch])
+        if(!ObjStr1[ch]){ //if the ObjStr1[ch] are not present in ch of Str2 then return false
+            return false;
+        }
+        ObjStr1[ch]--; //otherwise reduce the count of ch 
+       }
+       return true;
     }
 
     console.warn(checkAnagram("hello","ehllo"));

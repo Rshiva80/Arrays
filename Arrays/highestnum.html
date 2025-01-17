@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function findHighestNumber(arr) {
+    if (arr.length === 0) {
+        return "Array is empty"; // Handle edge case
+    }
+
+    let highest = arr[0]; // Assume the first element is the highest
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > highest) {
+            highest = arr[i]; // Update the highest number
+        }
+    }
+
+    return highest; // Return the highest number
+}
+
+// Example usage:
+const numbers = [3, 7, 2, 15, 10, 45, 1];
+const highestNumber = findHighestNumber(numbers);
+console.log("The highest number is:", highestNumber);
+
+
+</script>
+<body>
+    
+</body>
+</html>
