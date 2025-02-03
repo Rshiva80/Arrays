@@ -1,19 +1,24 @@
-let data = [12,6,8,11,15,9,20,5];
-let temp;
-
-for(let i=0;i<data.length;i++)
-{
-
-   for(let j=0;j<data.length;j++){
-
-      
-      if(data[j] > data[j+1]){
-         temp = data[j];
-         data[j]=data[j+1];
-         data[j+1] =temp
-      }
-
-   }
-   
+class List{
+constructor(data){
+    this.head = {
+        value : data,
+        next: null
+    };
+    this.tail = this.head;
 }
-console.log(data);
+    appendNode(newData){
+        let newNode = {
+            value : newData,
+            next : null
+        };
+        
+        this.tail.next = newNode; // Link current tail to new node
+        this.tail = newNode; // Update tail to new node
+    }
+}
+ 
+const l1 = new List(200);
+l1.appendNode(300);
+l1.appendNode(400);
+
+console.log(l1); // Prints the linked list object 
