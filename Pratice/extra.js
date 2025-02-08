@@ -63,3 +63,16 @@ let numberx = 12345;
 let reversedNumber = Number(String(numberx).split('').reverse().join(''));
 
 console.log(reversedNumber); // Output: 54321
+
+//Add $ after characters in String(Given: tomorrow Expected: t$m$$rr$$$)
+
+let str1 = "extraordinary";
+let data = str1.split('');
+
+for(let i=0;i<data.length;i=i+2){
+   data[i+1] = "$";
+
+} 
+console.log(data.join(''));
+
+//Second Max number (Given: 10,12,18,11,9,7,20 Expected: 18)

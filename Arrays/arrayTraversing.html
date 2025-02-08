@@ -27,6 +27,45 @@
     }
 }
 
+// Check if number is not found 
+let arr1 = [12, 6, 8, 10, 16, 11, 2];
+let position = -1; // Default to -1 (indicating not found)
+let newNum1 = 10;
+
+for (let i = 0; i < arr1.length; i++) {
+    if (arr[i] === newNum1) {
+        position = i; // Update position
+        console.log(`The position of number is ${i}`);
+        break; // Exit loop once found
+    }
+}
+
+// Check if the number was found
+if (position === -1) {
+    console.log(`The position not found`);
+}
+
+
+//finds all occurrences of newNum in the array:
+
+let arr = [12, 6, 8, 10, 16, 10, 11, 2, 10];
+let newNum = 10;
+let positions = []; // Array to store positions
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === newNum) {
+        positions.push(i); // Store index of occurrences
+    }
+}
+
+
+// Check if the number was found
+if (positions.length > 0) {
+    console.log(`The number ${newNum} is found at positions: ${positions.join(", ")}`);
+} else {
+    console.log(`The number ${newNum} was not found in the array.`);
+}
+
     </script>
     
 </head>
