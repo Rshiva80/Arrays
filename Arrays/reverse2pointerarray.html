@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,14 +92,37 @@ return word.join('');
 let data = "Stop the mess";
 console.log(reverseString(data));
 
+ //Reverse each word in the string (Given:payal shirish mehta Expected: layap hsisihs athem)
+
+ function reverseWords(str) {
+    return str.split(" ")  // Split the string into words
+              .map(word => word.split("").reverse().join(""))  // Reverse each word
+              .join(" ");  // Join words back into a string
+}
+
+let input = "payal shirish mehta";
+let output = reverseWords(input);
+console.log(output); // Expected Output: "layap hsirihs athem"
+
  
- 
+//JavaScript Solution Without reverse()
+function reverseWords(str) {
+    return str.split(" ")  // Split the string into words
+              .map(word => {
+                  let reversedWord = "";
+                  for (let i = word.length - 1; i >= 0; i--) {  // Reverse manually
+                      reversedWord += word[i];
+                  }
+                  return reversedWord;
+              })
+              .join(" ");  // Join words back into a string
+}
+//
+let input1 = "payal shirish mehta";
+let output1 = reverseWords(input1);
+console.log(output1); // Expected Output: "layap hsirihs athem"
+
 </script>
-
 <body>
-
-
-
 </body>
-
 </html>
