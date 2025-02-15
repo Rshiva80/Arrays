@@ -80,3 +80,24 @@ function findDuplicates(arr) {
 // Example Usage:
 let arr = ["apple", "banana", "orange", "apple", "grape", "banana", "mango"];
 console.log(findDuplicates(arr)); // Output: ['apple', 'banana']
+
+
+// //Write a program to remove duplicate elements from an array. Example:
+// Input: [1, 2, 2, 3, 4, 4]
+// Output: [1, 2, 3, 4]
+
+let arr1 = [1, 2, 2, 3, 4, 4];
+let uniqueArr = [];
+let Objnum = {};
+
+arr1.forEach(element => {
+    Objnum[element] = (Objnum[element]||0)+1;
+});
+
+ 
+
+for (let key in Objnum) {
+    uniqueArr.push(Number(key)); // Convert string keys back to numbers
+}
+
+console.log(uniqueArr); // Output: [1, 2, 3, 4]

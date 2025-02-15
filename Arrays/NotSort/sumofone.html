@@ -65,6 +65,32 @@
 // const result = FindSum([-5, -4, -3, -2, 0, 2, 4, 6, 8]);
 // console.log(result);
 
+//forEach() method. 
+
+// create an array
+const myNums = [1,2,3,4,5];
+
+// create a variable for the sum and initialize it
+let sum = 0;
+
+// calculate sum using forEach() method
+myNums.forEach( num => {
+  sum += num;
+})
+
+console.log(sum) // 15
+
+//reduce() 
+// / create an array
+const myNums1 = [1,2,3,4,5];
+
+// use reduce() method to find the sum
+var sum1 = myNums1.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+},0);
+
+console.log(sum1) // 15
+
 
 </script>
 <body>
